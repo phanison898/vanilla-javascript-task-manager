@@ -3,3 +3,95 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    font-family: poppins, sans-serif;
+}
+
+.container {
+    width: 480px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3, form {
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: grey;
+}
+
+form{
+    margin: 20px 0;
+}
+
+form input {
+    flex: 1;
+    height: 100%;
+    padding: 0 12px;
+    outline: none;
+    border: 0;
+}
+
+form button {
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: #0b85ff;
+    font-size: large;
+    padding: 0 20px;
+}
+
+ul {
+    width: 80%;
+    height: 35px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background-color:#fff;
+    margin: 10px 0;
+}
+
+.todo__text{
+    flex: 1;
+    padding: 0 10px;
+}
+
+li i {
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.todo__check-icon{
+    background-color: rgb(106, 255, 106);
+}
+
+
+.todo__delete-icon{
+    background-color: rgb(255, 101, 101);
+}
