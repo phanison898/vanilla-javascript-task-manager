@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
+    <title>Task Manager</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -22,28 +22,12 @@
   </head>
   <body>
     <div class="container">
-      <h3>Todo List</h3>
+      <h3>Task Manager</h3>
       <form class="todo_input">
-        <input type="text" id="todo-add-input" placeholder="enter what you wanna todo" />
+        <input type="text" id="todo-add-input" placeholder="Add a task" />
         <button id="todo-add-btn"><i class="fas fa-plus-square"></i></button>
       </form>
-      <ul class="todos_list">
-        <li class="todo">
-          <span class="todo__text">Javascript project</span>
-          <i class="todo__check-icon fa-solid fa-check"></i>
-          <i class="todo__delete-icon fa-solid fa-trash"></i>
-        </li>
-        <li class="todo">
-          <span class="todo__text">Javascript project</span>
-          <i class="todo__check-icon fa-solid fa-check"></i>
-          <i class="todo__delete-icon fa-solid fa-trash"></i>
-        </li>
-        <li class="todo">
-          <span class="todo__text">Javascript project</span>
-          <i class="todo__check-icon fa-solid fa-check"></i>
-          <i class="todo__delete-icon fa-solid fa-trash"></i>
-        </li>
-      </ul>
+      <ul class="todos_list"></ul>
     </div>
     <script src="./script.js"></script>
   </body>

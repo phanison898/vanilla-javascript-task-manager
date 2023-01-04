@@ -31,7 +31,9 @@ h3 {
     font-weight: 700;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: grey;
+    color: #fff;
+    margin: 10px 0;
+    text-shadow: 1px 1px 25px black;
 }
 
 form{
@@ -58,16 +60,21 @@ form button {
 
 ul {
     width: 80%;
-    height: 35px;;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-li {
+ul > li {
+    /* transition: all 0.5s ease-in-out; */
+    animation: mount 0.5s ease-out;
+}
+
+.todo, .todo__completed {
     width: 100%;
-    height: 100%;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,9 +83,22 @@ li {
     margin: 10px 0;
 }
 
+.todo__completed{
+    opacity: 0.5;
+}
+
+.todo__completed > span{
+    text-decoration: line-through;
+}
+
 .todo__text{
     flex: 1;
     padding: 0 10px;
+    font-size: 14px;
+    text-transform: capitalize;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 li i {
@@ -95,3 +115,49 @@ li i {
 .todo__delete-icon{
     background-color: rgb(255, 101, 101);
 }
+
+@keyframes unmount {
+    0% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes unmount_forward {
+    0% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes mount {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    40% {
+        transform: scale(1.1);
+    }
+    60% {
+        transform: scale(0.9);
+    }
+    80% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* 
+.todo__deleted{
+    animation: unmount_forward 0.25s ease-out;
+} */
