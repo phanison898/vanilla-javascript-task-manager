@@ -18,37 +18,37 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
-      <header>
-        <h3>2023 : Task Manager</h3>
-        <form class="todo_input">
-          <input type="text" id="todo-add-input" placeholder="Add a task" />
-          <button id="todo-add-btn"><i class="fas fa-plus-square"></i></button>
+      <header class="header">
+        <h3 class="task_heading">2023 : Task Manager</h3>
+        <form class="task_form">
+          <input type="text" class="task_input" placeholder="Add a task" />
+          <button class="task_submit"><i class="fas fa-plus-square"></i></button>
         </form>
-        <nav>
-          <a href="#">
-            <i class="switch fa-solid fa-toggle-off"></i>
-            <!-- <i class="fa-regular fa-toggle-large-off"></i> -->
+        <nav class="author_info">
+          <a class="author_info__link" href="https://github.com/phanison898" target="_blank">
+            <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://github.com/phanison898" target="_blank"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a href="https://www.instagram.com/phanison225/" target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="https://twitter.com/_phanison" target="_blank"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/phanison/" target="_blank"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
+          <a
+            class="author_info__link"
+            href="https://www.instagram.com/phanison225/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a class="author_info__link" href="https://twitter.com/_phanison" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a class="author_info__link" href="https://www.linkedin.com/in/phanison/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </nav>
       </header>
-      <ul class="todos_list"></ul>
+      <ul class="tasks_container"></ul>
     </div>
-    <script src="./script.js"></script>
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>

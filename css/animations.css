@@ -1,0 +1,40 @@
+
+@keyframes unmount {
+    0% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes unmount_forward {
+    0% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes mount {
+    0% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1.1);
+    }
+    60% {
+        transform: scale(0.9);
+    }
+    80% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

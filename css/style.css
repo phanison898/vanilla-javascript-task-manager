@@ -1,3 +1,5 @@
+@import url(./animations.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +8,16 @@
 
 body {
     background-color: #001e3c;
-    /* background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);  */
     font-family: poppins, sans-serif;
 }
 
 body::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .container {
     position: relative;
     width: 100vw;
-    /* width: 480px; */
     min-height: 100vh;
     margin: auto;
     display: flex;
@@ -26,7 +25,7 @@ body::-webkit-scrollbar {
     align-items: center;
 }
 
-header {
+.header {
     width: 100%;
     height: 100px;
     display: flex;
@@ -34,11 +33,11 @@ header {
     align-items: center;
 }
 
-form{
+.task_form {
     background-color: green;
 }
 
-h3, form, nav {
+.task_heading, .task_form, .author_info {
     flex: 1;
     height: 100%;
     display: flex;
@@ -46,7 +45,8 @@ h3, form, nav {
     align-items: center;
 }
 
-h3 {display: flex;
+.task_heading {
+    display: flex;
     justify-content: flex-start;
     font-weight: 700;
     letter-spacing: 5px;
@@ -57,59 +57,53 @@ h3 {display: flex;
     padding-left: 20px;
 }
 
-form{
+.task_form {
     height: 45px;
     margin: 20px 0;
     box-shadow: 0px 0px 8px #E0C3FC;
-    /* border: 3px solid #8EC5FC; */
-    /* border-radius: 10px; */
     overflow: hidden;
 }
 
-nav {
+.author_info {
     display: flex;
     justify-content: flex-end;
     padding-right: 20px;
     align-items: center;
 }
 
-nav a{
+.author_info__link {
     text-decoration: none;
     padding: 10px;
     color: white;
     text-shadow: 0px 0px 30px #007efc;
 }
 
-nav a:nth-child(1) {
+.author_info__link:nth-child(1) {
     color: white;
     box-shadow: none;
     font-size: 20px;
     padding-right: 20px;
 }
 
- 
-
-form input {
+.task_input {
     flex: 1;
     height: 100%;
     padding: 0 12px;
     outline: none;
     border: 0;
-    /* border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px; */
     font-weight: 700;
     letter-spacing: 1px;
     text-align: center;
 }
 
-form input::placeholder{
+.task_input::placeholder{
     font-weight: 700;
     opacity: 0.75;
     letter-spacing: 2px;
     text-transform: lowercase;
 }
 
-form button {
+.task_submit {
     height: 100%;
     border: none;
     cursor: pointer;
@@ -117,11 +111,9 @@ form button {
     color: #0b85ff;
     font-size: large;
     padding: 0 20px;
-    /* border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px; */
 }
 
-ul {
+.tasks_container {
     position: sticky;
     top: 100px;
     width: 480px;;
@@ -134,7 +126,7 @@ ul {
 }
 
 
-.todo, .todo__completed {
+.task, .task__completed {
     width: 100%;
     height: 35px;
     display: flex;
@@ -144,20 +136,18 @@ ul {
     background-color:#fff;
     margin: 10px 0;
     animation: mount 0.5s ease-out;
-    /* border-radius: 10px; */
     overflow: hidden;
 }
 
-.todo__completed{
+.task__completed {
     opacity: 0.4;
 }
 
-.todo__completed > span{
+/* .task__name {
     text-decoration: line-through;
+} */
 
-}
-
-.todo__text{
+.task__name {
     flex: 1;
     padding: 0 10px;
     font-size: 14px;
@@ -173,82 +163,20 @@ li i {
     cursor: pointer;
 }
 
-.todo__check-icon{
+.task__check_icon{
     background-color: rgb(0, 176, 0);
     transition: all 0.3s ease-in-out;
 }
 
-.todo__check-icon:hover{
+.task__check_icon:hover{
     background-color: rgb(0, 255, 0);
 }
 
 
-.todo__delete-icon{
+.task__delete_icon {
     background-color: rgb(255, 101, 101);
 }
 
-.todo__delete-icon:hover{
+.task__delete_icon:hover{
     background-color: rgb(199, 0, 0);
 }
-
-@keyframes unmount {
-    0% {
-        transform: scale(1.0);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(0);
-        opacity: 0;
-    }
-}
-
-@keyframes unmount_forward {
-    0% {
-        transform: scale(1.0);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(2);
-        opacity: 0;
-    }
-}
-
-@keyframes mount {
-    0% {
-        transform: scale(0);
-    }
-    40% {
-        transform: scale(1.1);
-    }
-    60% {
-        transform: scale(0.9);
-    }
-    80% {
-        transform: scale(1.0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes mountAsCompleted {
-    0% {
-        transform: scale(0);
-    }
-    40% {
-        transform: scale(1.1);
-    }
-    60% {
-        transform: scale(0.9);
-    }
-    80% {
-        transform: scale(1.0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-/* 
-.todo__deleted{
-    animation: unmount_forward 0.25s ease-out;
-} */
