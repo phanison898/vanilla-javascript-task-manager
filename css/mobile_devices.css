@@ -1,0 +1,32 @@
+@media only screen and (max-width: 480px) {
+
+    .container {
+        width: 100vw;
+        min-height: 100vh;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        background-color: aquamarine;
+    }
+
+    .task_form {
+        width: inherit;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .task_input{
+        width: 90%;
+        height: 200px;
+    }
+    .task_heading,  .author_info {
+       
+    }
+
+  }
